@@ -1,0 +1,21 @@
+import java.util.function.*;
+import java.util.stream.*;
+import java.util.*;
+
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Consumer<String> sp = System.out::println; 
+		sp.accept("hello");
+		sp.accept("sreemathi");
+		
+		BiPredicate<String,String> pp = (s,v) -> s.equals(v)  ;
+		boolean b = pp.test("hello","hello");
+		
+		System.out.println(b);
+		
+		
+	}
+
+}
